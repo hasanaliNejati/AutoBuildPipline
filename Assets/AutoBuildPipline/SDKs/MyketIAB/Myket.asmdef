@@ -1,0 +1,16 @@
+{
+    "name": "Myket",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "MYKET_STORE"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

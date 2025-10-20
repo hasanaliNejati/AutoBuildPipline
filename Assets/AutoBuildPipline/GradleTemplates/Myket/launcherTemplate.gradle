@@ -1,0 +1,85 @@
+apply plugin: 'com.android.application'
+apply from: 'setupSymbols.gradle'
+apply from: '../shared/keepUnitySymbols.gradle'
+
+dependencies {
+    implementation project(':unityLibrary')
+    }
+
+
+android {
+    namespace "**NAMESPACE**"
+    ndkPath "**NDKPATH**"
+    ndkVersion "**NDKVERSION**"
+
+    compileSdk **APIVERSION**
+    buildToolsVersion = "**BUILDTOOLS**"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    defaultConfig {
+        minSdk **MINSDK**
+        targetSdk **TARGETSDK**
+        applicationId '**APPLICATIONID**'
+        ndk {
+            abiFilters **ABIFILTERS**
+            debugSymbolLevel **DEBUGSYMBOLLEVEL**
+        }
+       
+
+            def marketApplicationId = "ir.mservices.market"
+            def marketBindAddress = "ir.mservices.market.InAppBillingService.BIND"
+            manifestPlaceholders = [marketApplicationId: "${marketApplicationId}",
+                                    marketBindAddress  : "${marketBindAddress}",
+                                    marketPermission   : "${marketApplicationId}.BILLING"]
+            buildConfigField "String", "IAB_PUBLIC_KEY", "\"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDrwHDGs2LCom2YQFUC+0aBGghEzW5xQ5HIr7p07UKyJc3N06xdSZkJHTgE008DF/8gBw+DYSVZVxbPDtaJnqDVRQ43vR5NkbhDrPcDPumYQjn5w/NeikJaLc0mjEaHbYRpIaTZWnclhEtPJSZnRYamODuncg4AjmHtYLPszmtuXQIDAQAB\""
+
+        versionCode **VERSIONCODE**
+        versionName '**VERSIONNAME**'        
+    }
+
+    androidResources {
+        noCompress = **BUILTIN_NOCOMPRESS** + unityStreamingAssets.tokenize(', ')
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~"
+    }**SIGN**
+
+    lint {
+        abortOnError false
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled **MINIFY_DEBUG**
+            proguardFiles getDefaultProguardFile('proguard-android.txt')**SIGNCONFIG**
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled **MINIFY_RELEASE**
+            proguardFiles getDefaultProguardFile('proguard-android.txt')**SIGNCONFIG**
+        }
+    }**PACKAGING****PLAY_ASSET_PACKS****SPLITS**
+**BUILT_APK_LOCATION**
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = false
+        }
+        abi {
+            enableSplit = true
+        }
+        texture {
+            enableSplit = true
+        }
+    }
+
+	**GOOGLE_PLAY_DEPENDENCIES**
+}**SPLITS_VERSION_CODE****LAUNCHER_SOURCE_BUILD_SETUP**

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "648599624421",
+    "project_id": "gherghiz-79f63",
+    "storage_bucket": "gherghiz-79f63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648599624421:android:ebb53ac1d108fdfc15d20c",
+        "android_client_info": {
+          "package_name": "ir.morvaridstudio.wordgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648599624421-k5bov3o1c1p518itfgnhqpa2tpf9m50d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCggNqfxbib_zJsLdxKT_URhwSMPx_BqcI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648599624421-k5bov3o1c1p518itfgnhqpa2tpf9m50d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

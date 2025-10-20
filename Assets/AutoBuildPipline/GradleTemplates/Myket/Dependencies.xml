@@ -1,0 +1,11 @@
+
+<dependencies>
+<androidPackages>
+    <repositories>
+        <repository>https://jitpack.io</repository>
+        <repository>https://maven.myket.ir</repository>
+    </repositories>
+    <androidPackage spec="com.github.myketstore:myket-billing-unity:unity-1.6" />
+</androidPackages>
+</dependencies>
+

@@ -1,0 +1,16 @@
+{
+    "name": "Bazzar",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "BAZAAR_STORE"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
